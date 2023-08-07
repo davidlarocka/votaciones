@@ -3,7 +3,7 @@
 
 ## Cómo levantar el ambiente con docker? 
 
-##  Prerequesito: 
+##  Prerequisito: 
 
 Tener instalado docker
 
