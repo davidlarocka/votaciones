@@ -5,7 +5,6 @@
         private $db_handle;
         private $config;
 
-
         public function __construct(Type $var = null) {
             $this->var = $var;
             $this->config = new config();
@@ -37,6 +36,7 @@
         public function allCanditates(){
            return  $this->run_query("SELECT * FROM canditate");   
         }
+
         public function allMedia(){
             return  $this->run_query("SELECT * FROM media");   
         }
@@ -62,7 +62,5 @@
         public function existVoto($rut){
             return  $this->run_query('SELECT * from vote where rut=\''.$rut.'\' ');   
         }
-
-
     }
 ?>

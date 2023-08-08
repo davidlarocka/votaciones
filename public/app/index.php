@@ -6,7 +6,6 @@ require_once("models/voteModel.php");
 require_once("config/config.php");
     
 
-
 $home = new HomeController();
 
 if(isset ($_GET['region'])){

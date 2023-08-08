@@ -1,11 +1,11 @@
 
-# App para registro de votos Desis
+# App Sistema de registro de votos Desis
 
-## Cómo levantar el ambiente con docker? 
+## ¿Cómo levantar el ambiente con docker? 
 
-##  Prerequisito: 
+##  Pre Requisito: 
 
-Tener instalado docker
+Tener instalado Docker
 
 ver: https://docs.docker.com/engine/install/ubuntu/
 
@@ -18,18 +18,18 @@ sudo docker-compose up
 
 ```
 
-esto levantará los siguientes contenedores :
+Esto levantará los siguientes contenedores :
 ## -php8.0 
 ## -nginx:lastest version
 ## -postgres:12
 
-Ademas levantará 
+Además levantará 
 
 ## -adminer 
 
-para visualizar/gestionar la BD.
+Para visualizar/gestionar la BD.
 
-podrá ingresar por la siguiente url: 
+Podrá ingresar por la siguiente url: 
 
 http://0.0.0.0:8084/
 
@@ -38,7 +38,7 @@ en la configuración podrás entrar con usuario: postgres,  clave:  postgres, se
 
 # DB
 
-el contenedor db carga un Postgres-12 con todas las configuraciones necesarias para interactuar con los demás contenedores y con la app.
+El contenedor db carga un Postgres-12 con todas las configuraciones necesarias para interactuar con los demás contenedores y con la app.
 
 La base de datos ya está precargada en el contenedor de postgres y la data se persiste en el directorio "postgres-data" (no es necesario cargar un backup). 
 
@@ -50,9 +50,30 @@ SQL/backup.sql
 ```
 # Ingresar al sistema
 
-Para ingresar a la primera vista deberá colocar en el navegador la siguiente url: 
+Para ingresar a la vista Home deberá colocar en el navegador la siguiente url: 
 
 ```
 http://0.0.0.0/app/index.php 
 
 ```
+
+# Arquitectura de la App
+La app está construida en PHP puro (sin framework), dividido en estructura MVC( models-views-controllers) en los siguientes directorios
+
+## controllers/HomeController.php 
+Contiene la logica de servicios.
+
+## models/voteModel.php 
+Contiene la conexión a db y los métodos que interactuan con el modelo de datos.
+
+## views/HomeTemplate.php 
+Contiene la vista html de la pagina inicial y los llamados a las fuentes y recursos css y JS.
+
+## helpers/Viewer.php 
+Contiene una clase que ayuda al controlador a llamar a la vista html renderizando una plantilla.
+
+## config/config.php 
+Contiene los datos de configuración para accesos a las tablas de la BD.
+
+## index.php 
+Funciona como enrutador de las peticiones http a la app.
