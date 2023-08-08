@@ -65,6 +65,7 @@ Para ingresar a la vista Home deberá colocar en el navegador la siguiente url:
 http://0.0.0.0/app/index.php 
 
 ```
+![Captura desde 2023-08-07 22-23-30](https://github.com/davidlarocka/votaciones/assets/1700287/8f0ed069-ae1b-4af9-96ba-d544f884de32)
 
 # Arquitectura de la App
 La app está construida en PHP puro (sin framework), dividido en estructura MVC( models-views-controllers) en los siguientes directorios
