@@ -11,7 +11,7 @@ ver: https://docs.docker.com/engine/install/ubuntu/
 
 
 # levantar el ambiente 
-una vez instalado docker ir al directorio raiz de proyecto donde está el archivo docker-compose.yml y correr el siguiente comando
+Una vez instalado docker ir al directorio raiz de proyecto donde está el archivo docker-compose.yml y correr el siguiente comando en una terminal (Shell)
 
 ```
 sudo docker-compose up 
@@ -33,7 +33,16 @@ Podrá ingresar por la siguiente url:
 
 http://0.0.0.0:8084/
 
-en la configuración podrás entrar con usuario: postgres,  clave:  postgres, servidor: db, Base de datos: app_desis. OJO, esto solo es en desarrollo... 
+En la configuración podrás entrar con 
+
+```
+usuario: postgres  
+clave:  postgres
+servidor: db 
+Base de datos: app_desis
+```
+
+OJO, esto solo es en desarrollo... no se recomienda esta configuración para ambientes QA y Prod
 
 
 # DB
